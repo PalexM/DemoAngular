@@ -1,0 +1,60 @@
+<br>
+<br>
+<br>
+<h6 id="test" style="margin-left:50px; color:red;">This fille is inported from User Components</h6>
+<br>
+<br>
+<h1 style="margin-left:120px;">User</h1>
+<ul>
+  <li>Name: {{name}}</li>
+  <li>Age: {{age}}</li>
+  <li>Email: {{email}}</li>
+  <li>Address :</li>
+    <li style="margin-left:150px;">Street:{{address.street}}</li>
+    <li style="margin-left:150px;" >City: {{address.city}}</li>
+    <li style="margin-left:150px;" >Country: {{address.country}}</li>
+</ul>
+<button (click)="editUser()"> Edit User</button>
+<div *ngIf=isEdit>
+  <h1 class="text-center">Edit User</h1>
+  <form  class="text-center">
+    <div>
+      <label for="name">Name: <span class="visible">{{name}}</span></label><br>
+      <input type="text" [(ngModel)]="name" name="name" />
+    </div>
+    <div>
+      <label for="age">Age: <span class="visible">{{age}}</span></label><br>
+      <input type="number" [(ngModel)]="age" name="age"/>
+    </div>
+    <div>
+      <label for="email">Email: <span class="visible">{{email}}</span></label><br>
+      <input type="email" [(ngModel)]="email" name="email"/>
+    </div>
+    <div>
+      <label for="street">Street: <span class="visible">{{address.street}}</span></label><br>
+      <input type="text"[(ngModel)]="address.street" name="address.street"/>
+    </div>
+    <div>
+      <label for="city">City: <span class="visible">{{address.city}}</span></label><br>
+      <input type="text" [(ngModel)]="address.city" name="address.city"/>
+    </div>
+    <div>
+      <label for="country">Country: <span class="visible">{{address.country}}</span></label><br>
+      <input type="text" [(ngModel)]="address.country" name="address.country"/>
+    </div>
+  </form>
+</div>
+<br />
+<br />
+<br />
+ <h1 style="margin-left:120px;">List of Hobbies</h1>
+ <form (submit)="addHobby(hobby.value)">
+   <div>
+     <label for="hobby">Add new hooby</label><br />
+     <input type="text" #hobby title="Hit Enter to submit"/>
+   </div>
+</form>
+  <ul>
+    <li *ngFor="let hobby of hobbies">{{hobby}} <button (click)="deletehobby(hobby)">x</button>
+    </li>
+  </ul>

@@ -1,20 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
+
+
 <div style="text-align:center">
   <img width="300" alt="Angular Logo" src="/assets/images/vertical.png">
 </div>
-    <div class="section">
-      <div class="top-border left"></div>
-      <div class="top-border right"></div>
-      <h1>Projects</h1>
-        <br>
-        <app-projects-form></app-projects-form>
-      <a  href="#">New Project</a>
-  </div>
-<div class="section ">
-      <div class="top-border left"></div>
-      <div class="top-border right"></div>
-      <h1>Users</h1>
-        <br>
-      <a href="#">New User</a>
-</div>
 
+<ul>
+  <li>
+    <a routerLink="/">Home</a>
+  </li>
+  <li>
+    <a routerLink="/posts"> Posts</a>
+  </li>
+  <li>
+    <a routerLink="/about">About</a>
+  </li>
+</ul>
+
+<br>
+
+<router-outlet></router-outlet>
